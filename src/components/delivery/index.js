@@ -1,15 +1,17 @@
 import React from "react";
-import Filter from "../common/filters";
-import "./delivery.css";
-import DeliveryCollections from "./deliveryCollections";
-import TopBrands from "./topBrands/index";
-import ExploreSection from "../common/explorSection/index";
 import { restaurants } from "../../data/restaurants";
+import ExploreSection from "../common/exploreSection";
+
+import Filters from "../common/filters";
+
+import "./delivery.css";
+import DeliveryColletions from "./deliveryCollections";
+import TopBrands from "./topBrands";
 
 const deliveryFilters = [
   {
     id: 1,
-    icon: <i class="fi fi-rr-settings-sliders absolute-center"></i>,
+    icon: <i className="fi fi-rr-settings-sliders absolute-center"></i>,
     title: "Filters",
   },
   {
@@ -27,29 +29,27 @@ const deliveryFilters = [
   {
     id: 5,
     title: "Delivery Time",
-    icon: <i class="fi fi-rr-apps-sort absolute-center"></i>,
+    icon: <i className="fi fi-rr-apps-sort absolute-center"></i>,
   },
   {
     id: 6,
-    title: "Great Offres",
+    title: "Great Offers",
   },
 ];
 
-const restaurantList = restaurants;
+const restaurantsList = restaurants;
 
 const Delivery = () => {
   return (
     <div>
       <div className="max-width">
-        <div>
-          <Filter filterList={deliveryFilters} />
-        </div>
+        <Filters filterList={deliveryFilters} />
       </div>
-      <DeliveryCollections />
+      <DeliveryColletions />
       <TopBrands />
       <ExploreSection
-        list={restaurantList}
-        collectionName="Delivery restaruant in indore"
+        restaurants={restaurantsList}
+        collectionName="Delivery Restaurants in Bangalore"
       />
     </div>
   );

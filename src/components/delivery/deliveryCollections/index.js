@@ -1,89 +1,100 @@
-import React from 'react';
-import './deliveryCollection.css';
-import Slider from 'react-slick'
-import NextArrow from '../../common/carousel/nextArrow';
-import PrevArrow from '../../common/carousel/prevArrow'
-import DeliveryItem from './deliveryitem';
+import React from "react";
+import "./deliveryCollections.css";
+import DeliveryItem from "./deliveryItem";
+import Slider from "react-slick";
+import PrevArrow from "../../common/carousel/prevArrow";
+import NextArrow from "../../common/carousel/nextArrow";
 
-
-const deliveryItem =[
+const deliveryItems = [
   {
-    id:1,
-    title:'Pizza',
-    cover:'https://b.zmtcdn.com/data/homepage_dish_data/4/7cf2db5ec261a0fa27a502d3196a6f60.png?output-format=webp'
+    id: 1,
+    title: "Pizza",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png",
   },
   {
-    id:2,
-    title:'Burger',
-    cover:'https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png'
+    id: 2,
+    title: "Burger",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/dff007e05e2f72a4abc0772c7a8cd0951632716697.png",
   },
   {
-    id:3,
-    title:'Paneer',
-    cover:'https://b.zmtcdn.com/data/dish_images/e44c42ff4b60b025225c8691ef9735b11635781903.png'
+    id: 3,
+    title: "Rolls",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/e61347d2b01cfae669530bd4b8e778e41632716577.png",
   },
   {
-    id:4,
-    title:'Chaat',
-    cover:'https://b.zmtcdn.com/data/homepage_dish_data/4/d9452952b432b35d1019ada01cedce7f.png'
+    id: 4,
+    title: "Cake",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/9694b563c793ea7bddf49f619dd4b7751632716697.png",
   },
   {
-    id:5,
-    title:'Sandwich',
-    cover:'https://b.zmtcdn.com/data/o2_assets/fc641efbb73b10484257f295ef0b9b981634401116.png?output-format=webp'
+    id: 5,
+    title: "Biryani",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/7e83ad932f340bacd71bd7e891ede6541632716696.png",
   },
   {
-    id:6,
-    title:'Cake',
-    cover:'https://b.zmtcdn.com/data/homepage_dish_data/2/78261817faa51e9456cfab592c189a62.png'
+    id: 6,
+    title: "Chaat",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/3d902eb4bb267efea010ade87bcb1f3f1632716698.png",
   },
   {
-    id:7,
-    title:'Thali',
-    cover:'https://b.zmtcdn.com/data/homepage_dish_data/4/361f59759ef3ee9c71982b85dadfaf20.png'
+    id: 7,
+    title: "Momos",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/5dbdb72a48cf3192830232f6853735301632716604.png",
   },
   {
-    id:8,
-    title:'Rolls',
-    cover:'https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png'
+    id: 8,
+    title: "Paneer",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/9428a39fba2a97f7470b8f3f26af86af1632716606.png",
   },
   {
-    id:9,
-    title:'Chicken',
-    cover:'https://b.zmtcdn.com/data/dish_images/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png'
+    id: 9,
+    title: "Samosa",
+    cover:
+      "https://b.zmtcdn.com/data/o2_assets/bc0cc8557a06fcd3aacdd7b241cf9db71632716547.png",
   },
   {
-    id:10,
-    title:'Fries',
-    cover:'https://b.zmtcdn.com/data/o2_assets/13bdf0d4c96d44e6ddb21fedde0fe4081632716661.png'
-  }
-]
+    id: 10,
+    title: "Paratha",
+    cover:
+      "https://b.zmtcdn.com/data/dish_images/49a62bf16f88e7d22994e387626292161632717505.png",
+  },
+  {
+    id: 11,
+    title: "Pastry",
+    cover:
+      "https://b.zmtcdn.com/data/homepage_dish_data/4/f06d9a57b0847677e36f163a7b7fe54a.png",
+  },
+];
 
 const settings = {
   infinite: false,
   slidesToShow: 4,
   slidesToScroll: 1,
   nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />
-
+  prevArrow: <PrevArrow />,
 };
 
-
-const DeliveryCollections = () => {
+const DeliveryColletions = () => {
   return (
-    <div className='delivery-collection'>
-      <div className='max-width'>
-          <div className='collection-title'>
-            Eat what makes you happy
-          </div>
-          <Slider {...settings}>
-            {deliveryItem.map((item) => {
-              return <DeliveryItem item={item}/>
-            })}
-          </Slider>
+    <div className="delivery-collections">
+      <div className="max-width">
+        <div className="collection-title">Eat what makes you happy</div>
+        <Slider {...settings}>
+          {deliveryItems.map((item) => {
+            return <DeliveryItem item={item} />;
+          })}
+        </Slider>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DeliveryCollections
+export default DeliveryColletions;

@@ -1,10 +1,9 @@
-import React from 'react'
-import './footer.css'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div> Made With 🔥 by Rit</div>
-  )
-}
+    <div className="absolute-center max-width">Made with 🔥 by Rit</div>
+  );
+};
 
-export default Footer
+export default Footer;

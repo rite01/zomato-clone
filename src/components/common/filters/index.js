@@ -1,8 +1,8 @@
 import React from "react";
-import FilterItem from "./filteritem";
+import FilterItem from "./filterItem";
 import "./filters.css";
 
-const Filter = ({ filterList }) => {
+const Filters = ({ filterList }) => {
   return (
     <div className="filters">
       {filterList &&
@@ -13,4 +13,4 @@ const Filter = ({ filterList }) => {
   );
 };
 
-export default Filter;
+export default Filters;
