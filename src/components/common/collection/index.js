@@ -6,7 +6,7 @@ import "./collection.css";
 
 const settings = {
   infinite: false,
-  slidesToShow: 6,
+  slidesToShow: 4,
   slidesToScroll: 1,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
